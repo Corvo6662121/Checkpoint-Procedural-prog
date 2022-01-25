@@ -1,0 +1,65 @@
+#1
+PROCEDURE dot_product (dot : INTEGER , VAR1+VAR2 :ARRY OF INTEGER)
+var
+ i :INTEGER;
+BEGIN
+    dot :=0;
+    i:=0;
+    if IF (VAR1.length <> VAR2.length) THEN
+    write("vectors with defferent sizes cannot calculat the dot product");
+        dot := NaN 
+         END_IF
+    WHILE (i < v1.length) DO
+        dot := dot + v1[i]*v2[i]
+    END_WHILE
+END
+#2
+ALGORITHM orth_vectors
+VAR
+    VAR1 , VAR2 : ARRAY_OF INTEGER [50];
+    dot : INTEGER ;
+BEGIN
+    n1:= read_size();
+    read_array(n1,v1);
+    n2:= read_size();
+    read_array(n2,v2);
+dot_product(VAR1,VAR2,dot);
+    IF (dot = 0) THEN
+        write("VAR1 and VAR2 are orthogonal");
+    ELSE 
+    write("VAR1 and VAR2 are not orthogonal");
+    END_IF
+END
+#3
+FUNCTION dot_product(VAR1,VAR2 : ARRAY_OF INTEGER) : INTEGER
+VAR
+    i , dot : INTEGER ;
+BEGIN
+    dot:= 0 ;
+    i:=0;
+    IF (>VAR1.length <> VAR2.length) THEN
+        write("vectors with defferent sizes cannot calculate dot product")
+        RETURN NaN ;
+    END_IF
+    WHILE (iVAR1.length) DO
+        dot := dot + VAR1[i]*VAR2[i];
+    END_WHILE
+    RETURN dot ;
+END
+#4
+ALGORITHM orthogonal_vectors
+VAR
+    VAR1 , VAR2 : ARRAY_OF INTEGER [50];
+    dot : INTEGER ;
+BEGIN
+    n1:= read_size();
+    read_array(n1,VAR1);
+    n2:= read_size();
+    read_array(n2,VAR2);
+    dot_product(v1,VAR2,dot);
+    IF (dot = 0) THEN
+        write("VARIABLE 1 and VARIABLE 2 are orthogonal");
+    ELSE 
+    write("VARIABLE 1 and VARIABLE2 are not orthogonal");
+    END_IF
+END
